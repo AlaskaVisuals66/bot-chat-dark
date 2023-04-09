@@ -8,7 +8,7 @@ while true; do
     if [ "$message" != "" ]; then
         output=$(curl -s https://api.openai.com/v1/completions \
           -H 'Content-Type: application/json' \
-          -H 'Authorization: Bearer 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' \
+          -H 'Authorization: Bearer $CHATGPT_TOKEN' \
           -d '{
           "model": "text-davinci-003",
           "prompt": "'"$message"'",
